@@ -7,6 +7,10 @@ Installation of the android SDK is very straightforward.
 - Download the SDK and unzip it.
 - Add the android-sdk-0.x.x.aar file to your project.
 
+### Supported versions
+
+Android 4.2 or higher
+
 ## Usage
 
 ### Start a task
