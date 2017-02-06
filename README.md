@@ -9,7 +9,7 @@ Installation of the android SDK is very straightforward.
 
 ### Supported versions
 
-Android 4.2 or higher
+Android 4.4 or higher
 
 ## Usage
 
