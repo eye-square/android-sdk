@@ -15,7 +15,7 @@ Android 4.4 or higher
 
 ### Start a task
 
-A task flow is started launching a `TaskActivity` instance through [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int)). The parameters ProjectID, SubjectGroupID and UserHash are used to identify the subject and define the experimental variation. These should be passed to the `TaskActivity` intent using [putExtra](https://developer.android.com/reference/android/content/Intent.html#putExtra(java.lang.String, android.os.Parcelable[])) before calling [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent, int)):
+A task flow is started launching a `TaskActivity` instance through [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent,%20int)). The parameters ProjectID, SubjectGroupID and UserHash are used to identify the subject and define the experimental variation. These should be passed to the `TaskActivity` intent using [putExtra](https://developer.android.com/reference/android/content/Intent.html#putExtra(java.lang.String,%20android.os.Parcelable[])) before calling [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent,%20int)):
 
 
 ```java
