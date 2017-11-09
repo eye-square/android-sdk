@@ -5,7 +5,7 @@
 Installation of the android SDK is very straightforward.
 
 - Download the SDK and unzip it.
-- Add the android-sdk-0.x.x.aar file to your project.
+- Add the eyesquare-android-sdk.aar file to your project.
 
 ### Supported versions
 
