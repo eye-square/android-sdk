@@ -13,10 +13,16 @@ Android 4.4 or higher
 
 ## Usage
 
-### Start a task
-
 A task flow is started launching a `TaskActivity` instance through [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent,%20int)). The parameters ProjectID, SubjectGroupID and UserHash are used to identify the subject and define the experimental variation. These should be passed to the `TaskActivity` intent using [putExtra](https://developer.android.com/reference/android/content/Intent.html#putExtra(java.lang.String,%20android.os.Parcelable[])) before calling [startActivityForResult](https://developer.android.com/reference/android/app/Activity.html#startActivityForResult(android.content.Intent,%20int)):
 
+### possible success values:
+
+success is an integer and represents the result of the task.
+
+* -1: a technical error occured, the subject couldn't start/get through the survey. This is often caused by wrongly passed ProjectIds and or SubjectGroupIds
+* 0: the success criteria of the ad/subjectGroup wasn't met
+* 1: the success criteria of the ad/subjectGroup was met
+* 2: the user canceled the run early
 
 ```java
 import com.eyesquare.sdk.TaskActivity;
@@ -42,7 +48,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 
 	if (requestCode == TASK_REQUEST && resultCode == RESULT_OK) {
 		// use the return intent to get information about the flow
-		Boolean result = data.getBooleanExtra("success", false);
+		int result = data.getIntExtra("success", 0);
 	}
 }
 ```
