@@ -7,6 +7,17 @@ Installation of the android SDK is very straightforward.
 - Download the SDK and unzip it.
 - Add the eyesquare-android-sdk.aar file to your project.
 
+The sdk requires that you enable Java 8 in your builds. You can learn more about how to enable this at https://developer.android.com/studio/write/java8-support. Essentially adding the following to your application's `build.gradle`:
+
+```
+android {
+  ...
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+```
+
 ### Supported versions
 
 Android 4.4 or higher
